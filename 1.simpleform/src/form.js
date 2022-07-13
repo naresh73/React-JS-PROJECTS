@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export default function Form() {
+export default function FormFill() {
 
     const [info, setInfo] = useState(
         {
@@ -8,29 +8,37 @@ export default function Form() {
             email: '',
             password: '',
             confirm_password: '',
-            mobile_no: '',
+            mobile: '',
         }
     );
 
     function user(e) {
-        const { name, value } = e.target;
+        const { id, value } = e.target;
         setInfo({
             ...info,
-            [name]: value,
+            [id]: value,
         })
     }
-    console.log(info)
+    console.log(info.name)
+    console.log(info.email)
+    console.log(info.password)
+    console.log(info.confirm_password)
+    console.log(info.mobile)
+
+    function handleSubmit() {
+        console.log(info)
+    }
 
     return (
-        <div class="form">
-            <div className='title'>Hello..</div>
+        <div className='form'>
+            <div className='title'>Hello</div>
             <div className='subtitle'>Fill your information</div>
-            <div class='input-container ic1'>
+            <div className='input-container ic1'>
                 <input id='name'
                     className='input'
                     type="name"
                     onChange={(e) => user(e)} />
-                <div class='cut'>
+                <div className='cut'>
                 </div>
                 <label for="name"
                     className='placeholder' >
@@ -38,12 +46,12 @@ export default function Form() {
                 </label>
             </div>
 
-            <div class='input-container ic2'>
+            <div className='input-container ic2'>
                 <input id='email'
                     className='input'
                     type="email"
                     onChange={(e) => user(e)} />
-                <div class='cut'>
+                <div className='cut'>
 
                 </div>
                 <label
@@ -53,12 +61,12 @@ export default function Form() {
                 </label>
             </div>
 
-            <div class='input-container ic1'>
+            <div className='input-container ic1'>
                 <input id='password'
                     className='input'
                     type="password"
                     onChange={(e) => user(e)} />
-                <div class='cut32'>
+                <div className='cut32'>
 
                 </div>
                 <label
@@ -68,16 +76,17 @@ export default function Form() {
                 </label>
             </div>
 
-            <div class='input-container ic1'>
-                <input id='conform password'
+            <div className='input-container ic1'>
+                <input id='confirm_password'
                     className='input'
                     type="password"
+                    placeholder=''
                     onChange={(e) => user(e)} />
-                <div class='cut33'>
+                <div className='cut31'>
 
                 </div>
                 <label
-                    for="conform password"
+                    for="confirm_password"
                     className='placeholder' >
                     CONFIRM
                     <br />
@@ -85,25 +94,24 @@ export default function Form() {
                 </label>
             </div>
 
-            <div class='input-container ic1'>
-                <input id='mobile number'
+            <div className='input-container ic1'>
+                <input id='mobile'
                     className='input'
-                    name='mobile number'
                     type='number'
                     onChange={(e) => user(e)}
                     required />
-                <div class='cut'>
+                <div className='cut'>
 
                 </div>
                 <label
-                    for="mobile number"
+                    for="mobile"
                     className='placeholder' >
                     MOBILE
                 </label>
             </div>
             <button
-                type="submit"
-                class="submit">
+                type="submit" onClick={handleSubmit}
+                className="submit">
                 submit
             </button>
         </div>

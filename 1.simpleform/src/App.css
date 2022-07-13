@@ -58,67 +58,43 @@ body {
   width: 100%;
 }
 
-.cut29 {
-  background-color: #000000;
-  border-radius: 10px;
-  height: 20px;
-  left: 20px;
-  position: absolute;
-  top: -20px;
-  transform: translateY(0);
-  transition: transform 200ms;
-  width: 65px;
-}
 
 
 .cut {
-  background-color: #000000;
+  background-color: #ffffff;
   border-radius: 10px;
-  height: 20px;
+  height: 25px;
   left: 20px;
-  position: absolute;
+  position:absolute;
   top: -20px;
-  transform: translateY(0);
-  transition: transform 200ms;
   width: 65px;
 }
 
 
 .cut32 {
-  color: black;
-  background-color: #000000;
+  background-color: #ffffff;
   border-radius: 10px;
   height: 30px;
   left: 20px;
   position: absolute;
   top: -20px;
-  transform: translateY(0);
-  transition: transform 200ms;
   width: 90px;
 }
 
-.cut33 {
-  color: black;
-  background-color: #000000;
+.cut31 {
+  background-color: #ffffff;
   border-radius: 10px;
   height: 40px;
   left: 20px;
   position: absolute;
   top: -20px;
-  transform: translateY(0);
-  transition: transform 200ms;
   width: 90px;
 }
-
 
 .cut-short {
   width: 50px;
 }
 
-.input:focus ~ .cut,
-.input:not(:placeholder-shown) ~ .cut {
-  transform: translateY(8px);
-}
 
 .placeholder {
   color: #65657b;
@@ -138,11 +114,11 @@ body {
 }
 
 .input:not(:placeholder-shown) ~ .placeholder {
-  color: #808097;
+  color: #000000;
 }
 
 .input:focus ~ .placeholder {
-  color: #ffffff;
+  color: #000000;
 }
 
 .submit {
