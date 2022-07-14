@@ -12,6 +12,8 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
+
+
 const pages = ['Home', 'About us', 'Our Offerings', 'FAQ', 'For Physiotherapists'];
 const settings = ['Profile', 'Account','Logout'];
 
@@ -35,26 +37,26 @@ const ResponsiveAppBar = () => {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar  position="fixed">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+          <AdbIcon sx={{ display: { xs: 'none', md: '' }, mr: 0 }} />
           <Typography
             variant="h6"
             noWrap
             component="a"
             href="/"
             sx={{
-              mr: 2,
+              mr: 50,
               display: { xs: 'none', md: 'flex' },
               fontFamily: 'monospace',
               fontWeight: 900,
-              letterSpacing: '.rem',
-              color: 'white',
+              letterSpacing: '.6rem',
+              color: 'black',
               textDecoration: 'none',
             }}
           >
-            CB Physiotherapists
+            CB <br/> Physiotherapy
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
