@@ -57,12 +57,12 @@ const TopBar = () => {
           >
             
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs : 'none', md: 'flex' } }}>
+          <Box sx={{ flexGrow: 1,display: { xs : 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 1, color: 'blue', display: 'block', fontWeight:540, fontFamily:'Georgia, serif;'}}
+                sx={{ my: 1, color: 'blue', display: 'block', fontWeight:600, fontFamily:'sans-serif'}}
               >
                 {page}
               </Button>
